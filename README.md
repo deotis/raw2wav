@@ -9,9 +9,11 @@ Linux/Windows 지원됩니다.
 $> go build raw2wav.go
 
 준비사항
+
 빌드된 실행 파일과 ffmpeg 실행파일을 동일한 경로에 위치하게 해 주세요.
 
 사용방법
+
 Usage: raw2wav [input type] [dir path] [output_type]
         - input type: alaw|mulaw
         - output type: pcm_alaw|pcm_mulaw
