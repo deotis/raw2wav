@@ -13,8 +13,8 @@ import (
 func usage_print() {
 
 	fmt.Println("Usage: raw2wav [input type] [dir path] [output_type]")
-	fmt.Println("	- input type: alaw|mulaw")
-	fmt.Println("	- output type: pcm_alaw|pcm_mulaw")
+	fmt.Println("	- input type: alaw|mulaw|s16le|u16le")
+	fmt.Println("	- output type: pcm_alaw|pcm_mulaw|pcm_s16le|pcm_u16le")
 	fmt.Println("	ex)raw2wav alaw ./sound/*.vce pcm_alaw")
 }
 
@@ -24,12 +24,14 @@ func main() {
 		os.Exit(0)
 	}
 
-	if (strings.Compare(os.Args[1], "alaw") != 0 && strings.Compare(os.Args[1], "mulaw") != 0) {
+	if (strings.Compare(os.Args[1], "alaw") != 0 && strings.Compare(os.Args[1], "mulaw") != 0 && 
+		strings.Compare(os.Args[1], "s16le") != 0 && strings.Compare(os.Args[1], "u16le") != 0) {
 		usage_print()
 		os.Exit(1)
 	} 
 
-	if (strings.Compare(os.Args[3], "pcm_alaw") != 0 && strings.Compare(os.Args[3], "pcm_mulaw") != 0) {
+	if (strings.Compare(os.Args[3], "pcm_alaw") != 0 && strings.Compare(os.Args[3], "pcm_mulaw") != 0 && 
+		strings.Compare(os.Args[3], "pcm_s16le") != 0 && strings.Compare(os.Args[3], "pcm_u16le") != 0) {
 		usage_print()
 		os.Exit(2)
 	} 
