@@ -12,6 +12,6 @@ $> go build raw2wav.go
 
 사용방법  
 Usage: raw2wav [input type] [dir path] [output_type]  
-    - input type: alaw|mulaw|s16le|u16le
-    - output type: pcm_alaw|pcm_mulaw|pcm_s16le|pcm_u16le
+    - input type: alaw|mulaw|s16le|u16le  
+    - output type: pcm_alaw|pcm_mulaw|pcm_s16le|pcm_u16le  
         ex)raw2wav alaw ./sound/*.vce pcm_alaw  
